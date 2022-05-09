@@ -2,45 +2,45 @@ TERANSFORMING TEXT:
 
 #1ST PART
 
-def read():
-	file = open(r"C:\Users\rahul_000\Desktop\null\input_text.txt")
-	text = file.read()
-	file.close()
-	return text
-def transform():
-	data = read()
-	data = data.split("\n")
-	print(data)
-	ndata = [] 
-	for i in data:
-		ndata.append(i.capitalize())
-	res = "\n".join(ndata)
-	return res
-def writer():
-	file = open(r"C:\Users\rahul_000\Desktop\null\transformed_text.txt","w")
-	res = file.write(transform())
-	file.close()
-	return res	
+	def read():
+		file = open(r"C:\Users\rahul_000\Desktop\null\input_text.txt")
+		text = file.read()
+		file.close()
+		return text
+	def transform():
+		data = read()
+		data = data.split("\n")
+		print(data)
+		ndata = [] 
+		for i in data:
+			ndata.append(i.capitalize())
+		res = "\n".join(ndata)
+		return res
+	def writer():
+		file = open(r"C:\Users\rahul_000\Desktop\null\transformed_text.txt","w")
+		res = file.write(transform())
+		file.close()
+		return res	
 
 #2ND PART
 
-from collections import Counter
-def read():
-	file = open(r"C:\Users\rahul_000\Desktop\null\input_text.txt")
-	text = file.read()
-	file.close()
-	return text
-def transform():
-	data = read()
-	data = data.lower()
-	res = Counter(data.split())
-	return str(res)
-def writer():
-	file = open(r"C:\Users\rahul_000\Desktop\null\transformed_text1.txt","w")
-	res = file.write(transform())
-	file.close()
-	return res
-writer()	
+	from collections import Counter
+	def read():
+		file = open(r"C:\Users\rahul_000\Desktop\null\input_text.txt")
+		text = file.read()
+		file.close()
+		return text
+	def transform():
+		data = read()
+		data = data.lower()
+		res = Counter(data.split())
+		return str(res)
+	def writer():
+		file = open(r"C:\Users\rahul_000\Desktop\null\transformed_text1.txt","w")
+		res = file.write(transform())
+		file.close()
+		return res
+	writer()	
 
 
  FLASK APP FOR 1ST PART:
